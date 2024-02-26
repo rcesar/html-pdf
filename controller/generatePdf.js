@@ -17,7 +17,7 @@ const generatePdf = async (type, payload) => {
 
   if (type === 'base64') {
     const page = await browser.newPage();
-    await page.goto(`data:text/html;base64,${payload}`);
+    await page.setContent(payload)
     const pdf = await page.pdf();
     await browser.close();
     // Return Buffer

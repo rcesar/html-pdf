@@ -15,6 +15,7 @@ router.get("/generate-pdf", async (req, res) => {
 });
 
 router.post("/generate-pdf", async (req, res) => {
+  console.log('body', req.body.content)
   let result = await generatePdf('base64', req.body.content);
   let filename = crypto.randomBytes(16).toString("hex").toUpperCase();
   if (req.body.filename) {
