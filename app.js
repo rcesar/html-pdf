@@ -16,7 +16,8 @@ app.use(cookieParser())
 
 app.use((req, res, next) => {
   if (PROTECT_ROUTES) {
-    const { api_key } = req.body
+    let api_key
+    api_key = req.body.api_key || req.query.api_key
     if (API_KEY === api_key) {
       next()
       return
