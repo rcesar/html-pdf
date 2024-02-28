@@ -24,7 +24,7 @@ app.use((req, res, next) => {
     }
     res.statusCode = 401
     res.json({
-      message: 'not_authorised_to_use_api'
+      message: 'Not Authorized'
     })
   } else {
     next()
