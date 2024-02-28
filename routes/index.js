@@ -29,6 +29,15 @@ handlebars.registerHelper('percent', function (value) {
   return (value * 100).toFixed(2)
 })
 
+handlebars.registerHelper('formatDate', function (value) {
+  const dt = new Date(value)
+  const date = String(dt.getDate()).padStart(2, '0')
+  const month = String(dt.getMonth() + 1).padStart(2, '0')
+  const year = String(dt.getFullYear()).padStart(4, '0')
+
+  return `${date}/${month}/${year}`
+})
+
 router.get("/", (_, res) => {
   res.send({health: true})
 });
