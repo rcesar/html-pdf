@@ -23,7 +23,10 @@
       page-break-inside: auto;
     }
 
-    tr { page-break-inside: avoid; page-break-after: auto }
+    tr {
+      page-break-inside: avoid;
+      page-break-after: auto
+    }
 
     th,
     td {
@@ -63,7 +66,8 @@
   <p>No sistema de linha de vida foi considerado cabo de aço {{cable.gaugeInches}}, no qual a Carga de
     ruptura mínima é de {{reduce cablebreakingstrength 1000}} kgf e massa de 0,352 Kg/m</p>
 
-  <p class="padded"><strong> 2.1. CÁLCULO LINHA DE VIDA {{toFixed span 2}}m:</strong> Como premissa a flecha inicial, f1={{toFixed (reduce arrowpercent 10) 2}}m e o
+  <p class="padded"><strong> 2.1. CÁLCULO LINHA DE VIDA {{toFixed span 2}}m:</strong> Como premissa a flecha inicial,
+    f1={{toFixed (reduce arrowpercent 10) 2}}m e o
     comprimento parabólico utlizando corda semi estatica com vão de {{toFixed span 1}}m, os seguintes
     dados com base nas equações abaixo:</p>
   </p>
@@ -73,20 +77,23 @@
       <td
         style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFC000">
-        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">DADOS DE ENTRADA
+        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">
+          DADOS DE ENTRADA
         </p>
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFC000">
         <p class="s3"
-          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">Valor</p>
+          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">
+          Valor</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFC000">
         <p class="s3"
-          style="padding-top: 9pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;font-weight: bold;">Unid.</p>
+          style="padding-top: 9pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;font-weight: bold;">
+          Unid.</p>
       </td>
     </tr>
     <tr style="height:22pt">
@@ -98,7 +105,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{bodyweight}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{bodyweight}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -129,7 +137,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{cable.gaugeInches}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{cable.gaugeInches}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -146,7 +155,8 @@
       <td
         style="width:126pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         colspan="2">
-        <p class="s4" style="padding-top: 5pt;padding-left: 13pt;text-indent: 0pt;text-align: left;">{{cable wireropegrade}}
+        <p class="s4" style="padding-top: 5pt;padding-left: 13pt;text-indent: 0pt;text-align: left;">{{cable
+          wireropegrade}}
         </p>
       </td>
     </tr>
@@ -159,7 +169,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{cablebreakingstrength}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{cablebreakingstrength}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -175,7 +186,8 @@
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
-        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{numberofpeople}}</p>
+        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{numberofpeople}}
+        </p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -191,7 +203,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{lanyardlength}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{lanyardlength}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -207,7 +220,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{abslengthextented}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{abslengthextented}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -223,7 +237,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{retractablefallarrest}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{retractablefallarrest}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -239,7 +254,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{retractablefallarrestbrakingspace}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{retractablefallarrestbrakingspace}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -255,7 +271,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{distancestowedpositiontoworkingposition}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{distancestowedpositiontoworkingposition}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -273,20 +290,23 @@
       <td
         style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFFF00">
-        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">Força cabo -
+        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">
+          Força cabo -
           Iteração [T]</p>
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFFF00">
         <p class="s3"
-          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">{{toRound cableforceiteration}}</p>
+          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">
+          {{toRound cableforceiteration}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFFF00">
         <p class="s3"
-          style="padding-top: 9pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;font-weight: bold;">kgf</p>
+          style="padding-top: 9pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;font-weight: bold;">
+          kgf</p>
       </td>
     </tr>
   </table>
@@ -296,33 +316,37 @@
       <td
         style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFC000">
-        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">CÁLCULOS</p>
+        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">
+          CÁLCULOS</p>
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFC000">
         <p class="s3"
-          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">Valor</p>
+          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">
+          Valor</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFC000">
         <p class="s3"
-          style="padding-top: 9pt;padding-left: 2pt;padding-right: 2pt;text-indent: 0pt;text-align: center;font-weight: bold;">Unid<span
-            class="s4">.</span></p>
+          style="padding-top: 9pt;padding-left: 2pt;padding-right: 2pt;text-indent: 0pt;text-align: center;font-weight: bold;">
+          Unid<span class="s4">.</span></p>
       </td>
     </tr>
     <tr style="height:22pt">
       <td
         style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#92D050">
-        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">Flecha (3%)</p>
+        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">
+          Flecha (3%)</p>
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#92D050">
         <p class="s5"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">{{arrowpercent}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">
+          {{arrowpercent}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
@@ -339,7 +363,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{cablelength}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">
+          {{cablelength}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -356,7 +381,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound cablelengthening}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          cablelengthening}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -373,7 +399,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound initialarrow}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          initialarrow}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -390,7 +417,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound initialarrowstraightcable}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          initialarrowstraightcable}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -407,7 +435,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound fullarrowdynamicload}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          fullarrowdynamicload}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -424,7 +453,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound brakingdistance}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          brakingdistance}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -440,7 +470,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound bodyload}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          bodyload}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -452,14 +483,16 @@
       <td
         style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#E1EEDA">
-        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">Força no cabo (T1)
+        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">
+          Força no cabo (T1)
         </p>
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#E1EEDA">
         <p class="s5"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">{{toRound forceinthecable}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">
+          {{toRound forceinthecable}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
@@ -477,7 +510,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound allowableforce}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound
+          allowableforce}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -493,7 +527,8 @@
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
-        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{numberofpeople}}</p>
+        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{numberofpeople}}
+        </p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -509,7 +544,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed zlq1 2}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed
+          zlq1 2}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -525,7 +561,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed zlq2 2}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed
+          zlq2 2}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -541,7 +578,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed hp 2}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed
+          hp 2}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -557,7 +595,8 @@
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
         <p class="s4"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{percent cableutilizationcoefficient}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{percent
+          cableutilizationcoefficient}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
@@ -568,14 +607,16 @@
       <td
         style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFFF00">
-        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">FATOR DE SERVIÇO DO
+        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">
+          FATOR DE SERVIÇO DO
           CABO</p>
       </td>
       <td
         style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
         bgcolor="#FFFF00">
         <p class="s5"
-          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">{{toFixed cablefactorservice 2}}</p>
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">
+          {{toFixed cablefactorservice 2}}</p>
       </td>
       <td
         style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
@@ -585,7 +626,7 @@
     </tr>
   </table>
   </p>
-  <p>
+  {{!-- <p>
   <h2>CONSIDERAÇÕES FINAIS</h2>
   <img src="{{baseUrl}}/images/calc.png" alt="">
 
@@ -605,8 +646,8 @@
     ✓ + 1m da sola dos pés ao solo por segurança - ts <br />
     ✓ - Altura do Cabo em Repouso - H (m) <br />
   </p>
-  <p>
-  <div class="padded">
+  <p> --}}
+  {{!-- <div class="padded">
     <div class="padded">
       <h2>2.2. ZONA LIVRE DE QUEDA - LINHA DE VIDA 10 M:</h2>
       <table>
@@ -635,7 +676,7 @@
   <p>Assim a diferença entre a ZLQ e a Altura mínima do local é de 6,00 m, ou seja, ZLQ < Altura mínima do local.
       Portanto, atende as normas de segurança.</p>
   </p>
-  </p>
+  </p> --}}
   <p>
   <h2>3. REFERENCIAS NORMATIVAS:</h2>
   <p>
