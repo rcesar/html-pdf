@@ -1,0 +1,653 @@
+<html>
+
+<head>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      font-size: 20px;
+      text-decoration: underline;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 20px;
+      text-decoration: underline;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      page-break-inside: auto;
+    }
+
+    tr { page-break-inside: avoid; page-break-after: auto }
+
+    th,
+    td {
+      border: 1px solid;
+      text-align: center;
+    }
+
+    .padded {
+      margin-left: 50px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Memorial de Cálculo para Sistema de Retenção de Queda</h1>
+  <p>
+    <strong>Projeto:</strong> Linhas de Vida Processo - Área da Levedura <br>
+    <strong>Cliente:</strong> Heineken <br>
+    <strong>Data:</strong> 06/12/2023 <br>
+    <strong>Eng° Mecânico:</strong> Renato Siqueira Ramos <br>
+    <strong>CREA:</strong> 5070691042-SP <br>
+    <strong>ART:</strong> {{calcname}} <br>
+  </p>
+  <p>
+  <h2>1. PREMISSAS DAS LINHAS DE VIDA</h2>
+  <ul>
+    <li>Linha de Vida: {{toFixed span 1}}m:</li>
+    <li>Número de Vãos (m): 1</li>
+    <li>Número de Usuários: {{numberofpeople}}</li>
+    <li>Massa por Usuário (kg): {{bodyweight}}</li>
+    <li>Comprimento do vão: {{toFixed span 1}}m</li>
+  </ul>
+  <p>Considerando que o usuário irá utilizar como equipamento individual na linha de vida</p>
+  </p>
+  <p>
+  <h2>2. CÁLCULOS DAS LINHAS DE VIDA</h2>
+  <p>No sistema de linha de vida foi considerado cabo de aço {{cable.gaugeInches}}, no qual a Carga de
+    ruptura mínima é de {{reduce cablebreakingstrength 1000}} kgf e massa de 0,352 Kg/m</p>
+
+  <p class="padded"><strong> 2.1. CÁLCULO LINHA DE VIDA {{toFixed span 2}}m:</strong> Como premissa a flecha inicial, f1={{toFixed (reduce arrowpercent 10) 2}}m e o
+    comprimento parabólico utlizando corda semi estatica com vão de {{toFixed span 1}}m, os seguintes
+    dados com base nas equações abaixo:</p>
+  </p>
+  <p>
+  <table style="border-collapse:collapse;margin-left:5.525pt" cellspacing="0">
+    <tr style="height:33pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFC000">
+        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">DADOS DE ENTRADA
+        </p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFC000">
+        <p class="s3"
+          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">Valor</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFC000">
+        <p class="s3"
+          style="padding-top: 9pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;font-weight: bold;">Unid.</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Peso do corpo [m]
+        </p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{bodyweight}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">kg</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Vão [L]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{span}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Diâmetro do cabo
+          [d]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{cable.gaugeInches}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Classe do cabo de
+          aço</p>
+      </td>
+      <td
+        style="width:126pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        colspan="2">
+        <p class="s4" style="padding-top: 5pt;padding-left: 13pt;text-indent: 0pt;text-align: left;">{{cable wireropegrade}}
+        </p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Força de ruptura do
+          cabo [fu]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{cablebreakingstrength}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">kgf</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Número de pessoas
+          [n]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{numberofpeople}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">n</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Comprimento do
+          talabarte [a]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{lanyardlength}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Comprimento abs.
+          Estendido [c]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{abslengthextented}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Uso de trava-queda
+          retrátil [A1]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{retractablefallarrest}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Espaço de frenagem
+          trava-queda retrátil [B1]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{retractablefallarrestbrakingspace}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Distância posição
+          recolhida a posição de trabalho [b1]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{distancestowedpositiontoworkingposition}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:15pt">
+      <td
+        style="width:419pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        colspan="3">
+        <p style="text-indent: 0pt;text-align: left;"><br /></p>
+      </td>
+    </tr>
+    <tr style="height:33pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFFF00">
+        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">Força cabo -
+          Iteração [T]</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFFF00">
+        <p class="s3"
+          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">{{toRound cableforceiteration}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFFF00">
+        <p class="s3"
+          style="padding-top: 9pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;font-weight: bold;">kgf</p>
+      </td>
+    </tr>
+  </table>
+  <p style="text-indent: 0pt;text-align: left;"><br /><br /><br /><br /><br /><br /></p>
+  <table style="border-collapse:collapse;margin-left:5.525pt" cellspacing="0">
+    <tr style="height:33pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFC000">
+        <p class="s3" style="padding-top: 9pt;padding-left: 15pt;text-indent: 0pt;text-align: left;font-weight: bold;">CÁLCULOS</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFC000">
+        <p class="s3"
+          style="padding-top: 9pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">Valor</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFC000">
+        <p class="s3"
+          style="padding-top: 9pt;padding-left: 2pt;padding-right: 2pt;text-indent: 0pt;text-align: center;font-weight: bold;">Unid<span
+            class="s4">.</span></p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#92D050">
+        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">Flecha (3%)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#92D050">
+        <p class="s5"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">{{arrowpercent}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#92D050">
+        <p class="s5" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">%</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Comprimento do cabo
+          c 3% (L1)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{cablelength}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">DI alongamento cabo
+          (∆L)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound cablelengthening}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Flecha inicial
+          parabólica (f1)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound initialarrow}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Flecha inicial cabo
+          reto (f2)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound initialarrowstraightcable}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Flecha total carga
+          dinâmica (f3)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound fullarrowdynamicload}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Distância de
+          frenagem</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound brakingdistance}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">mm</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Carga corpo (P)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound bodyload}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 2pt;text-indent: 0pt;text-align: center;">kgf</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#E1EEDA">
+        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">Força no cabo (T1)
+        </p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#E1EEDA">
+        <p class="s5"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center; font-weight: bold;">{{toRound forceinthecable}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#E1EEDA">
+        <p class="s5"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 1pt;text-indent: 0pt;text-align: center;">kgf</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Força admissível
+          (Fadm)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toRound allowableforce}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 2pt;padding-right: 2pt;text-indent: 0pt;text-align: center;">kgf</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Número de pessoas
+          (n)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 1pt;text-indent: 0pt;text-align: center;">{{numberofpeople}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">n</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Hmin cabo/piso –
+          talabarte (ZLQ1)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed zlq1 2}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Hmin cabo/piso –
+          trava-quedas (ZLQ 2 )</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed zlq2 2}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Dist. piso
+          trab/piso abaixo p/ trava-quedas (Hp)</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{toFixed hp 2}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">m</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left;">Coeficiente de
+          utilização do cabo</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;">{{percent cableutilizationcoefficient}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">%</p>
+      </td>
+    </tr>
+    <tr style="height:22pt">
+      <td
+        style="width:293pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFFF00">
+        <p class="s5" style="padding-top: 5pt;padding-left: 23pt;text-indent: 0pt;text-align: left; font-weight: bold;">FATOR DE SERVIÇO DO
+          CABO</p>
+      </td>
+      <td
+        style="width:89pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFFF00">
+        <p class="s5"
+          style="padding-top: 5pt;padding-left: 10pt;padding-right: 9pt;text-indent: 0pt;text-align: center;font-weight: bold;">{{toFixed cablefactorservice 2}}</p>
+      </td>
+      <td
+        style="width:37pt;border-top-style:solid;border-top-width:1pt;border-left-style:solid;border-left-width:1pt;border-bottom-style:solid;border-bottom-width:1pt;border-right-style:solid;border-right-width:1pt"
+        bgcolor="#FFFF00">
+        <p class="s4" style="padding-top: 5pt;text-indent: 0pt;text-align: center;">%</p>
+      </td>
+    </tr>
+  </table>
+  </p>
+  <p>
+  <h2>CONSIDERAÇÕES FINAIS</h2>
+  <img src="{{baseUrl}}/images/calc.png" alt="">
+
+  <p>Com fator de segurança Fs= {{toFixed cablefactorservice 2}}% e Tensão admissível σ ADM = {{allowableforce}} kgf</p>
+  <p>Segundo as recomendações da norma NBR 15986:2011, a corda de coeficiente de alongamento
+    baixo durante seu uso deve ser menor que 5%, na situação das premissas de projeto e cálculos
+    realizados o alongamento do cabo foi de {{toFixed cablefactorservice 2}}%, conforme recomendado.</p>
+  <p>
+    <img src="{{baseUrl}}/images/chart.png" alt="">
+  </p>
+  <p>Para cálculo da Zona Livre de Queda, considera-se os seguintes parâmetros:</p>
+  <p class="padded">
+    ✓ + Deflexão do Cabo - f3m (m) <br />
+    ✓ + Absorvedor de Energia do Talabarte Aberto - DLAbs (m) <br />
+    ✓ + Comprimento do Talabarte - LL (m) <br />
+    ✓ + Distancia ente o elemento de engate do cinturão e os pés - t (m) <br />
+    ✓ + 1m da sola dos pés ao solo por segurança - ts <br />
+    ✓ - Altura do Cabo em Repouso - H (m) <br />
+  </p>
+  <p>
+  <div class="padded">
+    <div class="padded">
+      <h2>2.2. ZONA LIVRE DE QUEDA - LINHA DE VIDA 10 M:</h2>
+      <table>
+        <thead>
+          <th>f (f3m)</th>
+          <th>DLAbs</th>
+          <th>LL</th>
+          <th>t</th>
+          <th>ts</th>
+          <th>H</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>0,79</td>
+            <td>1,75</td>
+            <td>2,00</td>
+            <td>1,50</td>
+            <td>1,00</td>
+            <td>6,00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+  <p>Assim a diferença entre a ZLQ e a Altura mínima do local é de 6,00 m, ou seja, ZLQ < Altura mínima do local.
+      Portanto, atende as normas de segurança.</p>
+  </p>
+  </p>
+  <p>
+  <h2>3. REFERENCIAS NORMATIVAS:</h2>
+  <p>
+    ABNT NR 35 - Trabalho em Altura; <br />
+    ABNT NBR 8800:2008 - Projeto de estruturas de aço e de estruturas mistas de aço e concreto
+    de edifícios;<br />
+    ABNT NBR 16489 - Sistemas e Equipamentos Individuais Contra Quedas em Altura;<br />
+    ABNT NBR16325-1:2014 - Proteção Contra Quedas em Altura: Dispositivos de Ancoragem Tipos A,B e D; <br />
+    ABNT NBR 16325-2:2014 - Proteção Contra Quedas em Altura: Dispositivos de Ancoragem
+    Tipo C.
+  </p>
+  </p>
+</body>
+
+</html>
