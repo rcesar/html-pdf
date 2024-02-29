@@ -3,7 +3,7 @@ const puppeteer = require('puppeteer')
 const generatePdf = async payload => {
   // Browser actions & buffer creator
   const browser = await puppeteer.launch({
-    executablePath: '/usr/bin/chromium-browser',
+    executablePath: '/usr/bin/google-chrome',
     headless: 'new',
     ignoreDefaultArgs: ['--disable-extensions'],
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
