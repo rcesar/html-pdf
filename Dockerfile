@@ -14,9 +14,6 @@ RUN apt-get update \
 
 RUN apt-get install chromium-browser
 
-# Create a user with name 'app' and group that will be used to run the app
-RUN groupadd -r app && useradd -rm -g app -G audio,video app
-
 WORKDIR /app
 
 # Copy and setup your project 
@@ -30,12 +27,5 @@ RUN npm i
 COPY . /app
 
 EXPOSE 3000
-
-# Give app user access to all the project folder
-RUN chown -R app:app /app
-
-RUN chmod -R 777 /app
-
-USER app
 
 CMD [ "npm", "run", "start" ]
