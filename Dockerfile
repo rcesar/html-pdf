@@ -12,7 +12,7 @@ RUN apt-get update \
       --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install chromium-browser
+# RUN apt-get install chromium-browser
 
 WORKDIR /app
 
