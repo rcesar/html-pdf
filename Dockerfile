@@ -12,6 +12,8 @@ RUN apt-get update \
       --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install chromium-browser
+
 # Create a user with name 'app' and group that will be used to run the app
 RUN groupadd -r app && useradd -rm -g app -G audio,video app
 
